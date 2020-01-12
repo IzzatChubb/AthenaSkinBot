@@ -2,7 +2,7 @@ from flask import Flask, make_response, request, jsonify
 import os
 import pandas as pd
 import numpy as np
-df=pd.read_csv('C:/Users/Izzat/Documents/SEM6/CSP650/Dataset/products_mapped.csv')
+df=pd.read_csv('products_mapped.csv')
 
 app=Flask(__name__)
 
@@ -56,7 +56,7 @@ def query(op1,op2):
     return msg
 
 
-
+'''
 def index():
     return results()
 
@@ -68,3 +68,4 @@ if __name__=='__main__':
     port=int(os.getenv('PORT',100))
     print('Starting app on port %d' %(port))
     app.run(debug=True,port=port,host='0.0.0.0')
+  '''
