@@ -56,14 +56,14 @@ def query(op1,op2):
     return msg
 
 
-'''
+
 def index():
     return results()
 
 #parameters = req.get('queryResult').get('action')
 #product=parameters.get("products")
 #skin_type=parameters.get("skin_type")
-
+'''
 if __name__=='__main__':
     port=int(os.getenv('PORT',100))
     print('Starting app on port %d' %(port))
