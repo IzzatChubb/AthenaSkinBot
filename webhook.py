@@ -57,12 +57,8 @@ def query(op1,op2):
 
 
 
-#def index():
-    #return results()
-
-#parameters = req.get('queryResult').get('action')
-#product=parameters.get("products")
-#skin_type=parameters.get("skin_type")
+def index():
+    return results()
 
 if __name__=='__main__':
     app.run(debug=True,use_reloader=True)
