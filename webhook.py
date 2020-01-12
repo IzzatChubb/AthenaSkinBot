@@ -6,7 +6,7 @@ df=pd.read_csv('products_mapped.csv')
 
 app=Flask(__name__)
 
-@app.route('/webhook',methods=['POST'])
+@app.route('/')
 def results():
     req=request.get_json(force=True)
     action=req.get('queryResult').get('action')
@@ -57,15 +57,13 @@ def query(op1,op2):
 
 
 
-def index():
-    return results()
+#def index():
+    #return results()
 
 #parameters = req.get('queryResult').get('action')
 #product=parameters.get("products")
 #skin_type=parameters.get("skin_type")
-'''
+
 if __name__=='__main__':
-    port=int(os.getenv('PORT',100))
-    print('Starting app on port %d' %(port))
-    app.run(debug=True,port=port,host='0.0.0.0')
-  '''
+    app.run(debug=True,use_reloader=True)
+  
